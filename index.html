@@ -577,7 +577,7 @@ footer a{color:#E8E2CC;}
     </div>
     <div class="hero-cta">
       <a class="btn" href="https://shiratama-uranai.stores.jp/" target="_blank" rel="noopener">鑑定メニューを見る 🍵</a>
-      <a class="btn ghost" href="https://x.gd/pM4zI" target="_blank" rel="noopener">無料ミニ鑑定はこちら 🍡</a>
+      <a class="btn ghost" href="#mini">無料ミニ鑑定はこちら 🍡</a>
     </div>
   </div>
 </header>
@@ -725,7 +725,7 @@ footer a{color:#E8E2CC;}
 <section class="section mini" id="mini">
   <div class="wrap">
     <p class="eyebrow">MINI KANTEI</p>
-    <h2 class="heading">✦ 無料ミニ鑑定 ✦</h2>
+    <h2 class="heading"> 無料ミニ鑑定 </h2>
     <p class="mini-lead">まずは気軽に試してみたい人へ。どちらかひとつ選んでね🍵</p>
     <div class="mini-grid">
       <div class="mini-card">
@@ -769,6 +769,13 @@ footer a{color:#E8E2CC;}
 <footer>
   <p>&copy; しらたまの鑑定部屋 ｜ <a href="https://shiratama-uranai.stores.jp/tokushoho" target="_blank" rel="noopener">特定商取引法に基づく表示</a> ・ <a href="https://shiratama-uranai.stores.jp/terms" target="_blank" rel="noopener">利用規約</a> ・ <a href="https://shiratama-uranai.stores.jp/privacy_policy" target="_blank" rel="noopener">プライバシーポリシー</a></p>
 </footer>
+
+<script>
+document.querySelector('a[href="#mini"]').addEventListener('click',function(e){
+  e.preventDefault();
+  document.getElementById('mini').scrollIntoView({behavior:'smooth'});
+});
+</script>
 
 </body>
 </html>
