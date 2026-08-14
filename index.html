@@ -116,7 +116,10 @@ a{color:inherit;}
 }
 .hero-img img{
   width:100%;
-  border-radius:50% 50% 46% 46% / 54% 54% 42% 42%;
+  height:auto;
+  aspect-ratio:1/1;
+  object-fit:cover;
+  border-radius:50%;
   background:#fff;
   box-shadow:0 18px 44px rgba(51,81,61,.16);
 }
@@ -130,7 +133,15 @@ a{color:inherit;}
 .hero-name b{font-size:22px;display:block;letter-spacing:.4em;margin-top:2px;}
 .hero-cta{
   display:flex;justify-content:center;margin-top:44px;
+  gap:16px;flex-wrap:wrap;
 }
+.btn.ghost{
+  background:transparent;
+  color:var(--midori);
+  border:2px solid var(--midori);
+  box-shadow:none;
+}
+.btn.ghost:hover{background:var(--midori);color:#FCFAF2;}
 .btn{
   display:inline-block;
   font-family:var(--maru);
@@ -451,13 +462,26 @@ footer a{color:#E8E2CC;}
 
 /* ---------- レスポンシブ ---------- */
 @media (max-width:820px){
-  .section{padding:64px 0;}
+  .section{padding:56px 0;}
+  .hero{padding:44px 0 52px;}
   .hero-inner{flex-direction:column-reverse;}
   .hero-copy{justify-content:center;}
   .tate{height:clamp(280px,60vw,360px);}
+  .hero-cta{margin-top:32px;}
   .mikata-grid{grid-template-columns:1fr;}
   .menu-grid{grid-template-columns:1fr;}
   .mini-grid{grid-template-columns:1fr;}
+}
+@media (max-width:480px){
+  body{font-size:15px;}
+  .section{padding:48px 0;}
+  .eyebrow{font-size:11px;letter-spacing:.24em;}
+  .heading{font-size:21px;letter-spacing:.06em;}
+  .dango{margin:20px auto 36px;}
+  .btn{padding:14px 30px;font-size:14px;letter-spacing:.1em;}
+  .nayami-answer{line-height:2;}
+  .menu-card{padding:28px 22px 24px;}
+  .mini-card{padding:26px 22px 24px;}
 }
 </style>
 </head>
@@ -478,6 +502,7 @@ footer a{color:#E8E2CC;}
     </div>
     <div class="hero-cta">
       <a class="btn" href="https://shiratama-uranai.stores.jp/" target="_blank" rel="noopener">鑑定メニューを見る 🍡</a>
+      <a class="btn ghost" href="#mini">無料ミニ鑑定はこちら 🍀</a>
     </div>
   </div>
 </header>
@@ -622,7 +647,7 @@ footer a{color:#E8E2CC;}
 </section>
 
 <!-- ミニ鑑定 -->
-<section class="section mini">
+<section class="section mini" id="mini">
   <div class="wrap">
     <p class="eyebrow">MINI KANTEI</p>
     <h2 class="heading">✦ 無料ミニ鑑定 ✦</h2>
